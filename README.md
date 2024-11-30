@@ -10,6 +10,8 @@ The purpose of the project is to design a machine learning model to predict the 
 
 The dataset Aeropolis is made of 20 variables such as Cargo Capacity, Air Temperature, Weather Status, Package Type and etc. It is made out of the data of cargo flights made and their environmental factors. The following is the description of the variables in data: 
 
+![Features](Visualization/Dataset%20Features.png)
+
 - *Cargo_Capacity_kg*: The amount of cargo the drone can carry in kilograms per flight.
 - *Air_Temperature_Celsius*: The air temperature during the drone's flight, measured in Celsius.
 - *Weather_Status*: The current weather conditions during the drone's operation.
