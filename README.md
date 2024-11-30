@@ -36,7 +36,7 @@ This data can be used to describe the behavior of cargo capacity in different si
 ### Output Comparison
 
 The output of the given code is the following comparison:
-
+![Comparison](Visualization/Model%20Comparison%20Table.png)
 - *Linear Regression Model*: RMSE: 0.8391, R2: 0.7279, Execution Time: 0.09
 - *Optimized SVR Model*: RMSE: 0.8403, R2: 0.7271, Execution Time: 996.10
 - *Optimized Random Forest Model*: RMSE: 0.8540, R2: 0.7181, Execution Time: 70.18
