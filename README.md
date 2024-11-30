@@ -37,11 +37,6 @@ This data can be used to describe the behavior of cargo capacity in different si
 
 The output of the given code is the following comparison:
 ![Comparison](Visualization/Model%20Comparison%20Table.png)
-- *Linear Regression Model*: RMSE: 0.8391, R2: 0.7279, Execution Time: 0.09
-- *Optimized SVR Model*: RMSE: 0.8403, R2: 0.7271, Execution Time: 996.10
-- *Optimized Random Forest Model*: RMSE: 0.8540, R2: 0.7181, Execution Time: 70.18
-- *Random Forest Model*: RMSE: 0.8712, R2: 0.7066, Execution Time: 5.78
-- *SVR Model*: RMSE: 0.8751, R2: 0.7040, Execution Time: 2.71
 
 
 
@@ -182,11 +177,7 @@ The project of Aeropolis dataset gives us an insight into the usage of machine l
 
 The result of the code is the following:
 
-- *Linear Regression Model*: RMSE: 0.8391, R2: 0.7279, Execution Time: 0.09
-- *Optimized SVR Model*: RMSE: 0.8403, R2: 0.7271, Execution Time: 996.10
-- *Optimized Random Forest Model*: RMSE: 0.8540, R2: 0.7181, Execution Time: 70.18
-- *Random Forest Model*: RMSE: 0.8712, R2: 0.7066, Execution Time: 5.78
-- *SVR Model*: RMSE: 0.8751, R2: 0.7040, Execution Time: 2.71
+![Comparison](Visualization/Model%20Comparison%20Table.png)
 
 
 By comparing the R2 values we can conclude that linear regression has a higher R2 value than the other models. This shows that accuracy of linear regression is higher. Also RMSE of linear regression is less than other models. This is because the difference between actual values and the predictions made by linear regression is less than the other models’ predictions. By comparing the execution times, we can say that Linear Regression is the fastest working algorithm. We can conclude that the correlation between variables is mostly linear. In this case even though Random Forest and SVR uses more complex methods, they might not have an advantage here because there is not so much non-linearity. 
