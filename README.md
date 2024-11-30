@@ -170,7 +170,7 @@ The project of Aeropolis dataset gives us an insight into the usage of machine l
 
 The result of the code is the following:
 
-![Comparison](5-Visualization/Model%20Comparison%20Table.png)
+![Comparison](Visualization/5-Model%20Comparison%20Table.png)
 
 
 By comparing the R2 values we can conclude that linear regression has a higher R2 value than the other models. This shows that accuracy of linear regression is higher. Also RMSE of linear regression is less than other models. This is because the difference between actual values and the predictions made by linear regression is less than the other models’ predictions. By comparing the execution times, we can say that Linear Regression is the fastest working algorithm. We can conclude that the correlation between variables is mostly linear. In this case even though Random Forest and SVR uses more complex methods, they might not have an advantage here because there is not so much non-linearity. 
