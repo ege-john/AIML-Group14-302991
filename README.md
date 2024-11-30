@@ -37,11 +37,11 @@ This data can be used to describe the behavior of cargo capacity in different si
 
 The output of the given code is the following comparison:
 
-- *Linear Regression Model*: R²:   RMSE:
-- *Random Forest Model*: R²:   RMSE:
-- *Optimized Random Forest Model*: R²:   RMSE:
-- *SVR Model*: R²:   RMSE:
-- *Optimized SVR Model*: R²:   RMSE:
+- *Linear Regression Model*: RMSE: 0.8395, R2: 0.7276
+- *Random Forest Model*: RMSE: 0.8699, R2: 0.7075
+- *Optimized Random Forest Model*: RMSE: 0.8751, R2: 0.7040
+- *SVR Model*: RMSE: 0.8539, R2: 0.7183
+- *Optimized SVR Model*: RMSE: 0.8403, R2: 0.7271
 
 
 The output shows us that the R2 score of the linear regression model is greater than other models. This means that the accuracy of predictions made by linear regression model is higher than others. Also, RMSE score of linear regression is less than others. Having a smaller RMSE score shows that this model makes less mistakes when predicting the cargo capacity. The results are described in the Results section below with more details.
@@ -180,11 +180,11 @@ The project of Aeropolis dataset gives us an insight into the usage of machine l
 
 The result of the code is the following:
 
-- *Linear Regression Model*: R²:   RMSE:
-- *Random Forest Model*: R²:   RMSE:
-- *Optimized Random Forest Model*: R²:   RMSE:
-- *SVR Model*: R²:   RMSE:
-- *Optimized SVR Model*: R²:   RMSE:
+- *Linear Regression Model*: RMSE: 0.8395, R2: 0.7276
+- *Random Forest Model*: RMSE: 0.8699, R2: 0.7075
+- *Optimized Random Forest Model*: RMSE: 0.8751, R2: 0.7040
+- *SVR Model*: RMSE: 0.8539, R2: 0.7183
+- *Optimized SVR Model*: RMSE: 0.8403, R2: 0.7271
 
 
 By comparing the R2 values we can conclude that linear regression has a higher R2 value than the other models. This shows that accuracy of linear regression is higher. Also RMSE of linear regression is less than other models. This is because the difference between actual values and the predictions made by linear regression is less than the other models’ predictions. We can conclude that the correlation between variables is mostly linear. In this case even though Random Forest and SVR uses more complex methods, they might not have an advantage here because there is not so much non-linearity. 
