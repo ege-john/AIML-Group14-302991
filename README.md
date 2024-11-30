@@ -16,26 +16,6 @@ The dataset Aeropolis is made of 20 variables such as Cargo Capacity, Air Temper
 
 ![Features](Visualization/Dataset%20Features.png)
 
-- *Cargo_Capacity_kg*: The amount of cargo the drone can carry in kilograms per flight.
-- *Air_Temperature_Celsius*: The air temperature during the drone's flight, measured in Celsius.
-- *Weather_Status*: The current weather conditions during the drone's operation.
-- *Package_Type*: The type of package or cargo the drone is delivering.
-- *Vertical_Landing*: Indicates if the drone uses vertical landing capability.
-- *Equipment_Cost*: The cost of the drone equipment.
-- *Market_Region*: The geographical market where the drone operates.
-- *Flight_Duration_Minutes*: The total duration of the flight, measured in minutes.
-- *Terrain_Type*: The type of terrain over which the drone flies (e.g., urban, rural).
-- *Water_Usage_liters*: The amount of water used by the drone during the flight, in liters.
-- *Flight_Hours*: The cumulative flight hours logged by the drone.
-- *Delivery_Time_Minutes*: The total time taken for the drone to complete the delivery.
-- *Cleaning_Liquid_Usage_liters*: The amount of cleaning liquid used by the drone for maintenance.
-- *Climate_Zone*: The climate zone in which the drone is operating.
-- *Quantum_Battery*: Indicates if the drone uses a quantum-powered battery.
-- *Flight_Zone*: The operational zone where the drone conducts its flights.
-- *Autopilot_Quality_Index*: A rating of the autopilot system's performance.
-- *Vertical_Max_Speed*: The maximum vertical speed the drone can achieve.
-- *Wind_Speed_kmph*: The wind speed during the drone's flight, measured in kilometers per hour.
-- *Route_Optimization_Per_Second*: The number of route optimizations performed per second by the drone's navigation system.
 
 This data can be used to describe the behavior of cargo capacity in different situations. The given code analyzes the correlation between features of the dataset and creates models for predicting the cargo capacity of a new flight by looking at other features. 
 
@@ -113,16 +93,23 @@ Later, it shows the statistics of each feature. By looking at these the user can
 Then a visualized explanatory data analysis is done with generating a heatmap, regression plot and distribution plot. 
 
 The code checks the missing values on the dataset and visualizes the result to do a proper analysis. The result shows that almost 10% of all features are missing. This can lead to problems during the training of the models. So, the code should impute the missing values in the following sections.
+![MissingValue](Visualization/1-Graph%20of%20Missing%20Values.png)
 
 The heatmap illustrates the correlation between each feature in dataset. The aim is to see how much a change in one feature can affect the other feature. We can easily see that Wind Speed and Cargo Capacity is highly correlated while other parameters have correlations close to zero. This means that a change in Wind Speed can increase or decrease the value of Cargo Capacity. Also, there is a correlation between Cargo Capacity and Air Temperature which is close to zero but still higher than the other correlations. All the other features have correlations with Cargo Capacity close to zero. We can conclude that a change in Air Temperature can have a slight effect on Cargo Capacity, while Wind Speed can have a large effect. 
+![Heatmap](Visualization/2-Correlation%20Heatmap.png)
 In order to inspect the correlation of Wind Speed and Cargo Capacity more, the code creates a regression plot. By looking at the plot it is easily noticeable that the changes in one of the variables affect the other one. 
+![Regression](Visualization/3-Regression%20Plot%20of%20WindSpeed%20vs%20CargoCapacity.png)
 
-Then the distributions of numerical columns are plotted to understand and see the skewness of data. This process is made in order to decide whether the code should impute the missing values with mean or median. By looking at the results, it is obvious that all the numerical data except Cleaning Liquid Usage has skewness near to zero. This means that taking the mean of these features to fill the missing values doesn’t make a bias on the learning process because the graphs of the distribution of features are symmetrical. However, the median imputing is used to fill the missing values of Cleaning Liquid Usage to prevent misinformation. This is because the Cleaning Liquid Usage graph is skewed to the left side. If the mean of Cleaning Liquid Usage would be used to impute the missing data there could be a misleading because of skewness. Other than that, the categorical missing values are filled by looking at the most frequent data. 
+
+Then the distributions of numerical columns are plotted to understand and see the skewness of data. This process is made in order to decide whether the code should impute the missing values with mean or median. 
+![Distribution](Visualization/4-Distribution%20of%20Features.png)
+By looking at the results, it is obvious that all the numerical data except Cleaning Liquid Usage has skewness near to zero. This means that taking the mean of these features to fill the missing values doesn’t make a bias on the learning process because the graphs of the distribution of features are symmetrical. However, the median imputing is used to fill the missing values of Cleaning Liquid Usage to prevent misinformation. This is because the Cleaning Liquid Usage graph is skewed to the left side. If the mean of Cleaning Liquid Usage would be used to impute the missing data there could be a misleading because of skewness. Other than that, the categorical missing values are filled by looking at the most frequent data. 
 
 After that the data is split into training and test sets. 
-The models(Linear Regression, Random Forest and Support Vector Regressor) are defined and trained. Afterwards each model is tested on the test set and their R2 and RMSE are calculated. 
+The models(Linear Regression, Random Forest and Support Vector Regressor) are defined and trained. Afterwards each model is tested on the test set and their R2, RMSE and Execution Time are calculated. 
 Later, hyperparameter tuning is made by the code for optimizing Random Forest and SVR. The GridSearchCV is used for random forest optimization. It is used because of its high efficiency in optimization. For the SVR optimization Random Search optimization method is used to prevent long optimizing time. 
-Finally, the code gives an output including the R2 and RMSE of all models and the optimized models so that the user can compare them.
+Finally, the code gives an output including the R2, RMSE and Execution Time of all models and the optimized models so that the user can compare them. Also, a graphical visualization of evaluations is given at the end.
+![Evaluation](Visualization/5-Model%20Comparison%20Graphs.png)
 
 
 ---
@@ -183,7 +170,7 @@ The project of Aeropolis dataset gives us an insight into the usage of machine l
 
 The result of the code is the following:
 
-![Comparison](Visualization/Model%20Comparison%20Table.png)
+![Comparison](5-Visualization/Model%20Comparison%20Table.png)
 
 
 By comparing the R2 values we can conclude that linear regression has a higher R2 value than the other models. This shows that accuracy of linear regression is higher. Also RMSE of linear regression is less than other models. This is because the difference between actual values and the predictions made by linear regression is less than the other models’ predictions. By comparing the execution times, we can say that Linear Regression is the fastest working algorithm. We can conclude that the correlation between variables is mostly linear. In this case even though Random Forest and SVR uses more complex methods, they might not have an advantage here because there is not so much non-linearity. 
