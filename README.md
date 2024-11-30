@@ -37,11 +37,12 @@ This data can be used to describe the behavior of cargo capacity in different si
 
 The output of the given code is the following comparison:
 
-- *Linear Regression Model*: RMSE: 0.8395, R2: 0.7276
-- *Random Forest Model*: RMSE: 0.8699, R2: 0.7075
-- *Optimized Random Forest Model*: RMSE: 0.8751, R2: 0.7040
-- *SVR Model*: RMSE: 0.8539, R2: 0.7183
-- *Optimized SVR Model*: RMSE: 0.8403, R2: 0.7271
+- *Linear Regression Model*: RMSE: 0.8391, R2: 0.7279, Execution Time: 0.09
+- *Optimized SVR Model*: RMSE: 0.8403, R2: 0.7271, Execution Time: 996.10
+- *Optimized Random Forest Model*: RMSE: 0.8540, R2: 0.7181, Execution Time: 70.18
+- *Random Forest Model*: RMSE: 0.8712, R2: 0.7066, Execution Time: 5.78
+- *SVR Model*: RMSE: 0.8751, R2: 0.7040, Execution Time: 2.71
+
 
 
 The output shows us that the R2 score of the linear regression model is greater than other models. This means that the accuracy of predictions made by linear regression model is higher than others. Also, RMSE score of linear regression is less than others. Having a smaller RMSE score shows that this model makes less mistakes when predicting the cargo capacity. The results are described in the Results section below with more details.
@@ -180,16 +181,16 @@ The project of Aeropolis dataset gives us an insight into the usage of machine l
 
 The result of the code is the following:
 
-- *Linear Regression Model*: RMSE: 0.8395, R2: 0.7276
-- *Random Forest Model*: RMSE: 0.8699, R2: 0.7075
-- *Optimized Random Forest Model*: RMSE: 0.8751, R2: 0.7040
-- *SVR Model*: RMSE: 0.8539, R2: 0.7183
-- *Optimized SVR Model*: RMSE: 0.8403, R2: 0.7271
+- *Linear Regression Model*: RMSE: 0.8391, R2: 0.7279, Execution Time: 0.09
+- *Optimized SVR Model*: RMSE: 0.8403, R2: 0.7271, Execution Time: 996.10
+- *Optimized Random Forest Model*: RMSE: 0.8540, R2: 0.7181, Execution Time: 70.18
+- *Random Forest Model*: RMSE: 0.8712, R2: 0.7066, Execution Time: 5.78
+- *SVR Model*: RMSE: 0.8751, R2: 0.7040, Execution Time: 2.71
 
 
-By comparing the R2 values we can conclude that linear regression has a higher R2 value than the other models. This shows that accuracy of linear regression is higher. Also RMSE of linear regression is less than other models. This is because the difference between actual values and the predictions made by linear regression is less than the other models’ predictions. We can conclude that the correlation between variables is mostly linear. In this case even though Random Forest and SVR uses more complex methods, they might not have an advantage here because there is not so much non-linearity. 
-As the SVR is a model which works better on smaller datasets, the results show us that it underperformed on this large dataset. However, optimized SVR performs better than not optimized SVR. 
-The improving of R2 score and decreasing in RMSE after optimization of Random Forest and SVM shows that hyperparameter tuning worked well. 
+By comparing the R2 values we can conclude that linear regression has a higher R2 value than the other models. This shows that accuracy of linear regression is higher. Also RMSE of linear regression is less than other models. This is because the difference between actual values and the predictions made by linear regression is less than the other models’ predictions. By comparing the execution times, we can say that Linear Regression is the fastest working algorithm. We can conclude that the correlation between variables is mostly linear. In this case even though Random Forest and SVR uses more complex methods, they might not have an advantage here because there is not so much non-linearity. 
+As the SVR is a model which works better on smaller datasets, the results show us that it underperformed on this large dataset. However, optimized SVR performs better than not optimized SVR but it takes much longer time.
+The increasing of R2 score and decreasing in RMSE after optimization of Random Forest and SVM shows that hyperparameter tuning worked well. While SVR model was performing worse than Random Forest before optimization, its R2 score and RMSE gave better results than Random Forest after optimization.
 
 Finally, R2 scores of all models are around 0.7. This shows that the models can explain almost 70 percent of the variance in the Cargo Capacity. It is a decent result for a machine learning algorithm for data prediction. Also, we can conclude that preprocessing of the data with sampling, imputing missing values and scaling worked well for the aim of the project. 
 
