@@ -1,8 +1,8 @@
 # AI&ML Group 14 - Aeropolis Project
 ## Team Members
-Member 1 (“Captain”): Ege John Isik (302991)
-Member 2: Muhammet Emin Albayram (303991)
-Member 3: Adasu Akel (305201)
+- *Member 1 (“Captain”): Ege John Isik (302991)
+- *Member 2: Muhammet Emin Albayram (303991)
+- *Member 3: Adasu Akel (305201)
 
 This is a README file for the Aeropolis Project-14. The purpose of this is to give the reader an insight about the project by listing the purpose, methods and results of the project in detail. The explanations of the given code and its purpose is given in the following sections.
 
