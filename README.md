@@ -83,7 +83,7 @@ To recreate the environment used during coding, follow these steps:
 ![Steps](Visualization/Flowchart%20Showing%20Steps.png)
 ## Code Inspection
 
-The first part of the code imports the necessary libraries. After that it loads the data with using pandas and samples it. The sample is chosen as 5% in order to keep the training process fast while preventing underfitting. However, the user can adjust the value based on the desire and goals of the analysis. 
+The first part of the code imports the necessary libraries. After that it loads the data with using pandas and samples it. The sample is chosen as 1% in order to keep the training process fast while preventing underfitting. However, the user can adjust the value based on the desire and goals of the analysis. 
 In the second section, there is a part which shows a preview of the dataset. 
 
 Then, the explanatory data analysis start.
